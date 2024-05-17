@@ -1,7 +1,7 @@
 import aiohttp
 
 
-class Client:
+class BaseClient(object):
     
     def __init__(self):
         self._session = aiohttp.ClientSession()
@@ -15,3 +15,6 @@ class Client:
     
     async def __aexit__(self, exc_t, exc_v, exc_tb):
         await self.close()
+
+
+    async def _make_request(self):

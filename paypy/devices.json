@@ -1,0 +1,39 @@
+{
+  "samsung": [
+    {
+      "modelName": "sm-g9730c",
+      "osVersion": "29.0.0",
+      "osReleaseVersion": "10",
+      "hardwareName": "qcom",
+      "deviceBrandName": "samsung"
+    },
+    {
+      "modelName": "sm-n9700",
+      "osVersion": "30.0.0",
+      "osReleaseVersion": "11",
+      "hardwareName": "qcom",
+      "deviceBrandName": "samsung"
+    },
+    {
+      "modelName": "sm-n9700",
+      "osVersion": "31.0.0",
+      "osReleaseVersion": "12",
+      "hardwareName": "qcom",
+      "deviceBrandName": "samsung"
+    },
+    {
+      "modelName": "sm-g980",
+      "osVersion": "32.0.0",
+      "osReleaseVersion": "13",
+      "hardwareName": "qcom",
+      "deviceBrandName": "samsung"
+    },
+    {
+      "modelName": "sm-973c",
+      "osVersion": "33.0.0",
+      "osReleaseVersion": "13",
+      "hardwareName": "qcom",
+      "deviceBrandName": "samsung"
+    }
+  ]
+}

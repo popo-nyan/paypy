@@ -1,2 +1,2 @@
 # paypy
-Unofficial PayPay API wrapper
+Unofficial PayPay Mobile API async wrapper 
