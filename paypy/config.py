@@ -3,7 +3,7 @@ from enum import Enum, unique
 
 
 @unique
-class PayPayLang(str, Enum):
+class PayPayLang(Enum):
     JA_JP = "ja"
     EN_US = "en"
 
