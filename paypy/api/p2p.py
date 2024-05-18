@@ -1,4 +1,5 @@
 from ..client import BaseClient
+from ..models import (P2PLinkInfoRequestParamModel)
 
 
 class P2PLinkAPI(object):
@@ -8,5 +9,5 @@ class P2PLinkAPI(object):
         self.__base = base
 
     async def get_p2p_link_info(self,
-                                verification_code: str):
+                                params: P2PLinkInfoRequestParamModel):
         pass

@@ -1,5 +1,8 @@
 import aiohttp
 
+from .models import (DeviceBaseModel)
+from .utils import (load_json_file)
+
 
 class BaseClient(object):
 
@@ -24,4 +27,8 @@ class BaseClient(object):
                             payload: str | None = None,
                             headers: str | None = None,
                             ) -> aiohttp.ClientResponse:
+        pass
+
+    async def __construct_device_info(self,
+                                      select_index: int | None = None) -> DeviceBaseModel:
         pass

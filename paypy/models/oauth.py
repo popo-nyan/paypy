@@ -3,18 +3,18 @@ from dataclasses import dataclass
 
 @dataclass(slots=True, kw_only=True)
 class Oauth2ParHeaderBase:
-    resultCode: str
-    resultMessage: str
+    result_code: str
+    result_message: str
 
 
 @dataclass(slots=True, kw_only=True)
 class Oauth2ParPayloadBase:
-    requestUri: str
-    expiresIn: int
-    expiredAt: str
+    request_uri: str
+    expires_in: int
+    expired_at: str
 
 
 @dataclass(slots=True, kw_only=True)
-class Oauth2ParBase:
+class Oauth2ParResponseBase:
     header: Oauth2ParHeaderBase | None = None
     payload: Oauth2ParPayloadBase | None = None
