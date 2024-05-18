@@ -3,7 +3,7 @@ from dataclasses import dataclass
 
 
 @dataclass(slots=True, kw_only=True)
-class DeviceBaseModel:
+class DeviceInfoBaseModel:
     device_name: str
     device_hardware_name: str
     device_manufacturer_name: str

@@ -1,17 +1,20 @@
+import os
+import random
 import aiohttp
 
-from .models import (DeviceBaseModel)
+from .models import (DeviceInfoBaseModel)
 from .utils import (load_json_file)
 
 
 class BaseClient(object):
 
     def __init__(self):
-        self._session = aiohttp.ClientSession()
+        self.__session = aiohttp.ClientSession()
+        self._current_path = os.path.dirname(__file__)
 
     async def close(self):
-        if not self._session.closed:
-            await self._session.close()
+        if not self.__session.closed:
+            await self.__session.close()
 
     async def __aenter__(self):
         return self
@@ -29,6 +32,16 @@ class BaseClient(object):
                             ) -> aiohttp.ClientResponse:
         pass
 
-    async def __construct_device_info(self,
-                                      select_index: int | None = None) -> DeviceBaseModel:
-        pass
+    async def _construct_device_info(self,
+                                     select_index: int | None = None) -> DeviceInfoBaseModel:
+        devices_info = await load_json_file(self._current_path + "/devices.json")
+        if select_index is None:
+            device_info = random.choice(devices_info['samsung'])
+        else:
+            device_info = devices_info[select_index]
+        return DeviceInfoBaseModel(device_name=device_info['modelName'],
+                                   device_hardware_name=device_info['hardwareName'],
+                                   device_manufacturer_name=device_info['deviceBrandName'],
+                                   client_os_type='Android',
+                                   client_os_version=device_info['osVersion'],
+                                   client_os_release_version=device_info['osReleaseVersion'])
