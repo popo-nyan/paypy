@@ -18,3 +18,10 @@ class DeviceLockType(Enum):
     biometric_weak = "BIOMETRIC_WEAK"
     pin = "DEVICE"
     none = "NONE"
+
+
+@unique
+class DeviceNetworkStatus(Enum):
+    wifi = 0
+    mobile = 1
+    no_connection = 2

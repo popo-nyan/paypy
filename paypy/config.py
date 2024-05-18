@@ -31,8 +31,8 @@ class Configs:
                    'Network-Status': None,
                    'Client-Version': None,
                    'Client-Mode': 'NORMAL',
-                   'System-Locale': 'ja',
-                   'Timezone': 'Asia/Tokyo',
+                   'System-Locale': None,
+                   'Timezone': None,
                    'User-Agent': None,
                    'Accept-Charset': 'UTF-8',
                    'Accept': '*/*'}

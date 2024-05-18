@@ -19,13 +19,13 @@ class P2PLinkInfoRequestParamModel:
 
 @unique
 class P2PMoneyTransferStatus(Enum):
-    CREATED = 0
-    PENDING = 1
-    COMPLETED = 2
-    REJECTED = 3
-    CANCELLED = 4
-    EXPIRED = 5
-    FAILED = 6
+    created = 0
+    pending = 1
+    completed = 2
+    rejected = 3
+    cancelled = 4
+    expired = 5
+    failed = 6
 
 
 @dataclass(slots=True, kw_only=True)
